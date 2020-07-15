@@ -1,0 +1,24 @@
+{
+    "services": [
+        {
+            "type": "residential",
+            "sub-services": [
+                {
+                    "type": "carpet cleaning",
+                    "questions": [
+                        {
+                            "type": "number",
+                            "requried": true,
+                            "placeholder": "How many rooms?"
+                        },
+                        {
+                            "type": "number",
+                            "requried": true,
+                            "placeholder": "How many rooms?"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
