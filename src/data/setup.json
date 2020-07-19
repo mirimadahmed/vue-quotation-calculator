@@ -2,23 +2,63 @@
     "services": [
         {
             "type": "residential",
-            "sub-services": [
+            "title": "How many rooms?",
+            "icon": "",
+            "heading": "",
+            "subHeading": "",
+            "subServices": [
                 {
                     "type": "carpet cleaning",
+                    "image": "",
+                    "isNew": false,
                     "questions": [
                         {
-                            "type": "number",
+                            "type": "radio",
                             "requried": true,
-                            "placeholder": "How many rooms?"
+                            "title": "How many rooms?",
+                            "subTitle": "How many rooms?",
+                            "image": "",
+                            "tooltip": "",
+                            "price": 20,
+                            "hours": 0,
+                            "options": [
+                                {
+                                    "title": "",
+                                    "subTitle": "",
+                                    "toolTip": "",
+                                    "questions": [
+                                        {
+                                            "type": "number",
+                                            "requried": true,
+                                            "title": "How many rooms?",
+                                            "subTitle": "How many rooms?",
+                                            "image": "",
+                                            "tooltip": "",
+                                            "price": 20,
+                                            "hours": 0,
+                                            "questions": []
+                                        }
+                                    ]
+                                }
+                            ]
+                            
                         },
                         {
                             "type": "number",
                             "requried": true,
-                            "placeholder": "How many rooms?"
+                            "placeholder": "How many rooms?",
+                            "price": 20
                         }
                     ]
                 }
             ]
         }
-    ]
+    ],
+    "postCodeMapping": {
+        "ABC123": 100,
+        "ABC124": 40,
+        "ABC125": 0,
+        "ABC126": 50,
+        "ABC127": 70
+    }
 }
