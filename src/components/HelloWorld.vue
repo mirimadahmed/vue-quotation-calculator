@@ -2,8 +2,8 @@
   <div class="hello">
     <h1>Checkbox input</h1>
     <CheckboxInput />
-    <h1>Text input</h1>
-    <TextInput />
+    <h1>Text input {{ textInput }} </h1>
+    <TextInput v-model="textInput" :settings="inputDef.services[0].subServices[0].questions[0]" />
     <h1>Date input</h1>
     <DateInput />
     <h1>Radio input</h1>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import inputs from '@/data/setup.json';
 import CheckboxInput from '@/components/inputs/checkbox-input.vue';
 import DateInput from '@/components/inputs/date-input.vue';
 import MultiselectInput from '@/components/inputs/multiselect-input.vue';
@@ -35,6 +36,16 @@ export default {
     RadioInput,
     RangeInput,
     TextInput,
+  },
+  computed: {
+    inputDef() {
+      return inputs;
+    },
+  },
+  data() {
+    return {
+      textInput: '',
+    };
   },
 };
 </script>

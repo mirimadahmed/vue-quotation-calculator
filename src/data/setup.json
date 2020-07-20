@@ -13,8 +13,9 @@
                     "isNew": false,
                     "questions": [
                         {
-                            "type": "radio",
+                            "type": "text",
                             "requried": true,
+                            "label": "some label",
                             "title": "How many rooms?",
                             "subTitle": "How many rooms?",
                             "image": "",
