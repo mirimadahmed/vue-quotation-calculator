@@ -5,9 +5,9 @@
     <h1>Text input {{ textInput }} </h1>
     <TextInput v-model="textInput" :settings="inputDef.services[0].subServices[0].questions[0]" />
     <h1>Date input</h1>
-    <DateInput />
+    <DateInput  :settings="inputDef.services[0].subServices[0].questions[0]" />
     <h1>Radio input</h1>
-    <RadioInput />
+    <RadioInput :settings="inputDef.services[0].subServices[0].questions[0]" />
     <h1>Range input</h1>
     <RangeInput />
     <h1>Multiselect input</h1>
