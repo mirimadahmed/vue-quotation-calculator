@@ -1,29 +1,45 @@
 <template>
   <div class="quantity">
     <div class="input-group">
-      <input type="button" value="-" class="button-minus" variant="info" @click="decrement()" />
-      <input type="number" min="0.00" :value="quantity" max="5.00" class="quantity-field" />
-      <input type="button" value="+" class="button-plus" variant="info" @click="increment()" />
+      <input type="button" value="-" class="button-minus" variant="success" @click="decrement()" />
+      <input type="number" min="0.00" :value="local_value" max="5.00" class="quantity-field" />
+      <input type="button" value="+" class="button-plus" variant="success" @click="increment()" />
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "Quantity",
+  props: {
+    value: {
+      type: Number,
+      required: true
+    },
+    settings: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {
-      quantity: 1
+      local_value: this.value
     };
   },
   methods: {
     increment() {
-      if (this.quantity <= 4) {
-        this.quantity += 1;
+      if (this.local_value <= 4) {
+        this.local_value += 1;
       }
     },
     decrement() {
-      if (this.quantity !== 0) {
-        this.quantity -= 1;
+      if (this.local_value !== 0) {
+        this.local_value -= 1;
+      }
+    },
+  },
+  watch: {
+    local_value(val) {
+      if (val !== this.value) {
+        this.$emit("input", val);
       }
     }
   }

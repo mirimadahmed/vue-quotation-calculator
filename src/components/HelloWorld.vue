@@ -15,8 +15,8 @@
     <DateInput v-model="dateInput" :settings="inputDef.services[0].subServices[0].questions[2]" />
     <h1>Radio input {{ radioInput }}</h1>
     <RadioInput v-model="radioInput" :settings="inputDef.services[0].subServices[0].questions[3]" />
-    <h1>Range input</h1>
-    <!-- <RangeInput /> -->
+    <h1>Range input {{ rangeInput }} </h1>
+    <RangeInput v-model="rangeInput" :settings="inputDef.services[0].subServices[0].questions[4]" />
     <h1>Multiselect input</h1>
     <!-- <MultiselectInput /> -->
   </div>
@@ -53,6 +53,7 @@ export default {
     return {
       textInput: "",
       radioInput: "",
+      rangeInput: 0,
       checkboxInput: [],
       dateInput: ""
     };

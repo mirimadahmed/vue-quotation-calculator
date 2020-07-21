@@ -1,53 +1,32 @@
 {
-    "services": [
-        {
-            "type": "residential",
-            "title": "How many rooms?",
-            "icon": "",
-            "heading": "",
-            "subHeading": "",
-            "subServices": [
-                {
-                    "type": "carpet cleaning",
+    "services": [{
+        "type": "residential",
+        "title": "How many rooms?",
+        "icon": "",
+        "heading": "",
+        "subHeading": "",
+        "subServices": [{
+            "type": "carpet cleaning",
+            "image": "",
+            "isNew": false,
+            "questions": [{
+                    "type": "text",
+                    "requried": true,
+                    "hasButton": true,
+                    "buttonText": "Next",
+                    "label": "some label",
+                    "title": "How many rooms?",
+                    "subTitle": "How many rooms?",
                     "image": "",
-                    "isNew": false,
-                    "questions": [
-                        {
-                            "type": "text",
-                            "requried": true,
-                            "hasButton": true,
-                            "buttonText": "Next",
-                            "label": "some label",
-                            "title": "How many rooms?",
-                            "subTitle": "How many rooms?",
-                            "image": "",
-                            "tooltip": "",
-                            "price": 20,
-                            "hours": 0,
-                            "options": [
-                                {
-                                    "title": "",
-                                    "subTitle": "",
-                                    "toolTip": "",
-                                    "questions": [
-                                        {
-                                            "type": "number",
-                                            "requried": true,
-                                            "title": "How many rooms?",
-                                            "subTitle": "How many rooms?",
-                                            "image": "",
-                                            "tooltip": "",
-                                            "price": 20,
-                                            "hours": 0,
-                                            "questions": []
-                                        }
-                                    ]
-                                }
-                            ]
-                            
-                        },
-                        {
-                            "type": "checkbox",
+                    "tooltip": "",
+                    "price": 20,
+                    "hours": 0,
+                    "options": [{
+                        "title": "",
+                        "subTitle": "",
+                        "toolTip": "",
+                        "questions": [{
+                            "type": "number",
                             "requried": true,
                             "title": "How many rooms?",
                             "subTitle": "How many rooms?",
@@ -55,85 +34,105 @@
                             "tooltip": "",
                             "price": 20,
                             "hours": 0,
-                            "options": [
-                                {
-                                    "value": "1",
-                                    "image": "",
-                                    "label": "Option 1",
-                                    "subTitle": "",
-                                    "toolTip": "",
-                                    "questions": []
-                                },
-                                {
-                                    "value": "2",
-                                    "image": "",
-                                    "label": "Option 2",
-                                    "subTitle": "",
-                                    "toolTip": "",
-                                    "questions": []
-                                },
-                                {
-                                    "value": "3",
-                                    "image": "",
-                                    "label": "Option 3",
-                                    "subTitle": "",
-                                    "toolTip": "",
-                                    "questions": []
-                                }
-                            ]
-                            
+                            "questions": []
+                        }]
+                    }]
+
+                },
+                {
+                    "type": "checkbox",
+                    "requried": true,
+                    "title": "How many rooms?",
+                    "subTitle": "How many rooms?",
+                    "image": "",
+                    "tooltip": "",
+                    "price": 20,
+                    "hours": 0,
+                    "options": [{
+                            "value": "1",
+                            "image": "",
+                            "label": "Option 1",
+                            "subTitle": "",
+                            "toolTip": "",
+                            "questions": []
                         },
                         {
-                            "type": "date",
-                            "requried": true,
-                            "title": "How many rooms?",
-                            "subTitle": "How many rooms?",
+                            "value": "2",
                             "image": "",
-                            "tooltip": ""
-                            
+                            "label": "Option 2",
+                            "subTitle": "",
+                            "toolTip": "",
+                            "questions": []
                         },
                         {
-                            "type": "radio",
-                            "requried": true,
-                            "title": "How many rooms?",
-                            "subTitle": "How many rooms?",
+                            "value": "3",
                             "image": "",
-                            "tooltip": "",
-                            "price": 20,
-                            "hours": 0,
-                            "options": [
-                                {
-                                    "value": "1",
-                                    "image": "",
-                                    "label": "Option 1",
-                                    "subTitle": "",
-                                    "toolTip": "",
-                                    "questions": []
-                                },
-                                {
-                                    "value": "2",
-                                    "image": "",
-                                    "label": "Option 2",
-                                    "subTitle": "",
-                                    "toolTip": "",
-                                    "questions": []
-                                },
-                                {
-                                    "value": "3",
-                                    "image": "",
-                                    "label": "Option 3",
-                                    "subTitle": "",
-                                    "toolTip": "",
-                                    "questions": []
-                                }
-                            ]
-                            
+                            "label": "Option 3",
+                            "subTitle": "",
+                            "toolTip": "",
+                            "questions": []
                         }
                     ]
+
+                },
+                {
+                    "type": "date",
+                    "requried": true,
+                    "title": "How many rooms?",
+                    "subTitle": "How many rooms?",
+                    "image": "",
+                    "tooltip": ""
+
+                },
+                {
+                    "type": "radio",
+                    "requried": true,
+                    "title": "How many rooms?",
+                    "subTitle": "How many rooms?",
+                    "image": "",
+                    "tooltip": "",
+                    "price": 20,
+                    "hours": 0,
+                    "options": [{
+                            "value": "1",
+                            "image": "",
+                            "label": "Option 1",
+                            "subTitle": "",
+                            "toolTip": "",
+                            "questions": []
+                        },
+                        {
+                            "value": "2",
+                            "image": "",
+                            "label": "Option 2",
+                            "subTitle": "",
+                            "toolTip": "",
+                            "questions": []
+                        },
+                        {
+                            "value": "3",
+                            "image": "",
+                            "label": "Option 3",
+                            "subTitle": "",
+                            "toolTip": "",
+                            "questions": []
+                        }
+                    ]
+
+                },
+                {
+                    "type": "range",
+                    "requried": true,
+                    "title": "How many rooms?",
+                    "subTitle": "How many rooms?",
+                    "image": "",
+                    "tooltip": "",
+                    "price": 20,
+                    "hours": 0
                 }
             ]
-        }
-    ],
+        }]
+    }],
     "postCodeMapping": {
         "ABC123": 100,
         "ABC124": 40,
