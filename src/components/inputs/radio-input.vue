@@ -2,16 +2,10 @@
     <div class="p-3 text-left">
       <h2 class="text-left" v-if="settings.title.length > 0">{{ settings.title }}</h2>
       <p class="text-left" v-if="settings.subTitle.length > 0">{{ settings.subTitle }}</p>
-      <div class="custom-control custom-radio">
-        <label>Domestic</label>
-        <input class="rado ml-3" type="radio" id="one" value="Domestic" v-model="picked">
+      <div class="custom-control custom-radio" v-for="option in settings.options" :key="option.value">
+        <label>{{ option.label }}</label>
+        <input class="rado ml-3" type="radio" id="one" :value="option.value" v-model="local_value">
       </div>
-      <hr>
-      <div class="custom-control custom-radio">
-        <label>Comercial</label>
-        <input class="ml-3" type="radio" id="two" value="Comercial" v-model="picked">
-      </div>
-      <span>Picked: {{ picked }}</span>
     </div>
 </template>
 
@@ -29,11 +23,11 @@ export default {
   },
   data() {
     return {
-      picked: this.value,
+      local_value: this.value,
     };
   },
   watch: {
-    picked(val) {
+    local_value(val) {
       if (val !== this.value) {
         this.$emit('input', val);
       }

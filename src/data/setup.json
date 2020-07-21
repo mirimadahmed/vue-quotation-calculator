@@ -47,7 +47,7 @@
                             
                         },
                         {
-                            "type": "radio",
+                            "type": "checkbox",
                             "requried": true,
                             "title": "How many rooms?",
                             "subTitle": "How many rooms?",
@@ -90,6 +90,43 @@
                             "subTitle": "How many rooms?",
                             "image": "",
                             "tooltip": ""
+                            
+                        },
+                        {
+                            "type": "radio",
+                            "requried": true,
+                            "title": "How many rooms?",
+                            "subTitle": "How many rooms?",
+                            "image": "",
+                            "tooltip": "",
+                            "price": 20,
+                            "hours": 0,
+                            "options": [
+                                {
+                                    "value": "1",
+                                    "image": "",
+                                    "label": "Option 1",
+                                    "subTitle": "",
+                                    "toolTip": "",
+                                    "questions": []
+                                },
+                                {
+                                    "value": "2",
+                                    "image": "",
+                                    "label": "Option 2",
+                                    "subTitle": "",
+                                    "toolTip": "",
+                                    "questions": []
+                                },
+                                {
+                                    "value": "3",
+                                    "image": "",
+                                    "label": "Option 3",
+                                    "subTitle": "",
+                                    "toolTip": "",
+                                    "questions": []
+                                }
+                            ]
                             
                         }
                     ]
