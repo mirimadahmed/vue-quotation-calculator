@@ -11,8 +11,8 @@
       :settings="inputDef.services[0].subServices[0].questions[0]"
       @clicked="btnClicked"
     />
-    <h1>Date input</h1>
-    <!-- <DateInput :settings="inputDef.services[0].subServices[0].questions[0]" /> -->
+    <h1>Date input {{ dateInput }}</h1>
+    <DateInput v-model="dateInput" :settings="inputDef.services[0].subServices[0].questions[2]" />
     <h1>Radio input</h1>
     <!-- <RadioInput :settings="inputDef.services[0].subServices[0].questions[0]" /> -->
     <h1>Range input</h1>
@@ -52,7 +52,8 @@ export default {
   data() {
     return {
       textInput: "",
-      radioInput: []
+      radioInput: [],
+      dateInput: ""
     };
   },
   methods: {

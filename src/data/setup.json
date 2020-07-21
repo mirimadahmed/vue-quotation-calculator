@@ -82,6 +82,15 @@
                                 }
                             ]
                             
+                        },
+                        {
+                            "type": "date",
+                            "requried": true,
+                            "title": "How many rooms?",
+                            "subTitle": "How many rooms?",
+                            "image": "",
+                            "tooltip": ""
+                            
                         }
                     ]
                 }
