@@ -47,10 +47,42 @@
                             
                         },
                         {
-                            "type": "number",
+                            "type": "radio",
                             "requried": true,
-                            "placeholder": "How many rooms?",
-                            "price": 20
+                            "label": "some label",
+                            "title": "How many rooms?",
+                            "subTitle": "How many rooms?",
+                            "image": "",
+                            "tooltip": "",
+                            "price": 20,
+                            "hours": 0,
+                            "options": [
+                                {
+                                    "value": "1",
+                                    "image": "",
+                                    "label": "Option 1",
+                                    "subTitle": "",
+                                    "toolTip": "",
+                                    "questions": []
+                                },
+                                {
+                                    "value": "2",
+                                    "image": "",
+                                    "label": "Option 2",
+                                    "subTitle": "",
+                                    "toolTip": "",
+                                    "questions": []
+                                },
+                                {
+                                    "value": "3",
+                                    "image": "",
+                                    "label": "Option 3",
+                                    "subTitle": "",
+                                    "toolTip": "",
+                                    "questions": []
+                                }
+                            ]
+                            
                         }
                     ]
                 }

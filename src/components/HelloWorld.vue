@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
-    <h1>Checkbox input</h1>
-    <!-- <CheckboxInput /> -->
+    <h1>Checkbox input {{ radioInput }}</h1>
+    <CheckboxInput
+      v-model="radioInput"
+      :settings="inputDef.services[0].subServices[0].questions[1]"
+    />
     <h1>Text input {{ textInput }}</h1>
     <TextInput
       v-model="textInput"
@@ -48,7 +51,8 @@ export default {
   },
   data() {
     return {
-      textInput: ""
+      textInput: "",
+      radioInput: []
     };
   },
   methods: {
