@@ -6,11 +6,14 @@
       <small id="label" for="input" v-if="settings.label.length > 0">{{ settings.label }}</small>
       <input type="text" id="input" class="form-control" v-model="local_value" />
     </div>
-    <button
-      type="button"
-      class="btn btn-green btn-lg"
-      v-if="settings.hasButton"
-    >{{ settings.buttonText }}</button>
+    <div class="text-right">
+      <button
+        type="button"
+        class="btn btn-success btn-lg"
+        v-if="settings.hasButton"
+        @click="$emit('clicked')"
+      >{{ settings.buttonText }}</button>
+    </div>
   </div>
 </template>
 
@@ -19,25 +22,25 @@ export default {
   props: {
     value: {
       type: String,
-      required: true,
+      required: true
     },
     settings: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
-      local_value: this.value,
+      local_value: this.value
     };
   },
   watch: {
     local_value(val) {
       if (val !== this.value) {
-        this.$emit('input', val);
+        this.$emit("input", val);
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

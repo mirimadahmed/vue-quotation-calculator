@@ -1,33 +1,37 @@
 <template>
   <div class="hello">
     <h1>Checkbox input</h1>
-    <CheckboxInput />
-    <h1>Text input {{ textInput }} </h1>
-    <TextInput v-model="textInput" :settings="inputDef.services[0].subServices[0].questions[0]" />
+    <!-- <CheckboxInput /> -->
+    <h1>Text input {{ textInput }}</h1>
+    <TextInput
+      v-model="textInput"
+      :settings="inputDef.services[0].subServices[0].questions[0]"
+      @clicked="btnClicked"
+    />
     <h1>Date input</h1>
-    <DateInput  :settings="inputDef.services[0].subServices[0].questions[0]" />
+    <!-- <DateInput :settings="inputDef.services[0].subServices[0].questions[0]" /> -->
     <h1>Radio input</h1>
-    <RadioInput :settings="inputDef.services[0].subServices[0].questions[0]" />
+    <!-- <RadioInput :settings="inputDef.services[0].subServices[0].questions[0]" /> -->
     <h1>Range input</h1>
-    <RangeInput />
+    <!-- <RangeInput /> -->
     <h1>Multiselect input</h1>
-    <MultiselectInput />
+    <!-- <MultiselectInput /> -->
   </div>
 </template>
 
 <script>
-import inputs from '@/data/setup.json';
-import CheckboxInput from '@/components/inputs/checkbox-input.vue';
-import DateInput from '@/components/inputs/date-input.vue';
-import MultiselectInput from '@/components/inputs/multiselect-input.vue';
-import RadioInput from '@/components/inputs/radio-input.vue';
-import RangeInput from '@/components/inputs/range-input.vue';
-import TextInput from '@/components/inputs/text-input.vue';
+import inputs from "@/data/setup.json";
+import CheckboxInput from "@/components/inputs/checkbox-input.vue";
+import DateInput from "@/components/inputs/date-input.vue";
+import MultiselectInput from "@/components/inputs/multiselect-input.vue";
+import RadioInput from "@/components/inputs/radio-input.vue";
+import RangeInput from "@/components/inputs/range-input.vue";
+import TextInput from "@/components/inputs/text-input.vue";
 
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String,
+    msg: String
   },
   components: {
     CheckboxInput,
@@ -35,18 +39,23 @@ export default {
     MultiselectInput,
     RadioInput,
     RangeInput,
-    TextInput,
+    TextInput
   },
   computed: {
     inputDef() {
       return inputs;
-    },
+    }
   },
   data() {
     return {
-      textInput: '',
+      textInput: ""
     };
   },
+  methods: {
+    btnClicked() {
+      alert("btn clicked from text input");
+    }
+  }
 };
 </script>
 
