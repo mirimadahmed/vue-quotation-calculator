@@ -49,7 +49,6 @@
                         {
                             "type": "radio",
                             "requried": true,
-                            "label": "some label",
                             "title": "How many rooms?",
                             "subTitle": "How many rooms?",
                             "image": "",
