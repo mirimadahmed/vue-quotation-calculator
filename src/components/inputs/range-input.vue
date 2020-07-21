@@ -1,19 +1,18 @@
 <template>
   <div class="quantity">
-
     <div class="input-group">
-  <input type="button" value="-" class="button-minus" variant="info" @click="decrement()">
-  <input type="number" min="0.00" :value="quantity" max="5.00" class="quantity-field">
-  <input type="button" value="+" class="button-plus" variant="info" @click="increment()">
-  </div>
+      <input type="button" value="-" class="button-minus" variant="info" @click="decrement()" />
+      <input type="number" min="0.00" :value="quantity" max="5.00" class="quantity-field" />
+      <input type="button" value="+" class="button-plus" variant="info" @click="increment()" />
+    </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'Quantity',
+  name: "Quantity",
   data() {
     return {
-      quantity: 1,
+      quantity: 1
     };
   },
   methods: {
@@ -26,8 +25,8 @@ export default {
       if (this.quantity !== 0) {
         this.quantity -= 1;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 <style>
@@ -46,7 +45,7 @@ input[type="button"] {
 }
 
 input[type="button"]:before {
-    content: "\e00b";
+  content: "\e00b";
 }
 
 input::-webkit-outer-spin-button,
@@ -60,17 +59,17 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-.input-group input[type='button'] {
-   transition: all 300ms ease;
-    border-radius: 100px;
-    font-size: 32px;
-    padding: 3px;
-    line-height: 0;
-    width: 31px;
-    height: 31px;
-    background:none;
-    color: #4ded90;
-    border: 1px solid #4ded90;
+.input-group input[type="button"] {
+  transition: all 300ms ease;
+  border-radius: 100px;
+  font-size: 32px;
+  padding: 3px;
+  line-height: 0;
+  width: 31px;
+  height: 31px;
+  background: none;
+  color: #4ded90;
+  border: 1px solid #4ded90;
 }
 
 .input-group .button-minus,
@@ -93,7 +92,7 @@ input::-webkit-inner-spin-button {
   margin: 0 0 5px;
   resize: vertical;
   border: 0px;
-  background:none;
+  background: none;
 }
 
 .button-plus {
@@ -106,5 +105,4 @@ input[type="number"] {
   font-size: 26px !important;
   font-weight: bold;
 }
-
 </style>

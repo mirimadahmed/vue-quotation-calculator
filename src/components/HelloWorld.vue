@@ -13,7 +13,7 @@
     />
     <h1>Date input {{ dateInput }}</h1>
     <DateInput v-model="dateInput" :settings="inputDef.services[0].subServices[0].questions[2]" />
-    <h1>Radio input {{ radioInput }} </h1>
+    <h1>Radio input {{ radioInput }}</h1>
     <RadioInput v-model="radioInput" :settings="inputDef.services[0].subServices[0].questions[3]" />
     <h1>Range input</h1>
     <!-- <RangeInput /> -->

@@ -2,7 +2,11 @@
   <div class="p-3 text-left row">
     <h2 class="text-left col-12" v-if="settings.title.length > 0">{{ settings.title }}</h2>
     <p class="text-left col-12" v-if="settings.subTitle.length > 0">{{ settings.subTitle }}</p>
-    <div v-for="option in settings.options" :key="option.value" class="form-check form-check-inline col-12 p-3">
+    <div
+      v-for="option in settings.options"
+      :key="option.value"
+      class="form-check form-check-inline col-12 p-3"
+    >
       <input
         class="form-check-input"
         type="checkbox"
