@@ -41,7 +41,7 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "vue/max-attributes-per-line": "on"
+      "vue/max-attributes-per-line": "off"
     }
   },
   "browserslist": [
