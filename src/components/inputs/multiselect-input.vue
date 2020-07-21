@@ -2,53 +2,53 @@
 <template>
   <div class="p-3">
     <div>
-      <label class="typo__label">Simple select / dropdown</label>
+      <label class="typo__label">{{ settings.title }}</label>
       <multiselect
-        v-model="value"
-        :options="options"
+        v-model="local_value"
+        :options="settings.options"
         :multiple="true"
         :close-on-select="false"
         :clear-on-select="false"
         :preserve-search="true"
-        placeholder="Pick some"
-        label="name"
-        track-by="name"
-        :preselect-first="true"
-      >
-        <template slot="selection" slot-scope="{ values, search, isOpen }">
-          <span
-            class="multiselect__single"
-            v-if="values.length &amp;&amp; !isOpen"
-          >{{ values.length }} options selected</span>
-        </template>
-      </multiselect>
-      <pre class="language-json"><code>{{ value  }}</code></pre>
+        :placeholder="settings.label"
+        label="label"
+        track-by="value"
+        :preselect-first="false"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import Multiselect from 'vue-multiselect';
+import Multiselect from "vue-multiselect";
 
 export default {
   components: {
-    Multiselect,
+    Multiselect
+  },
+  props: {
+    value: {
+      type: Array,
+      required: true
+    },
+    settings: {
+      type: Object,
+      required: true
+    }
   },
   data() {
     return {
-      value: [],
-      options: [
-        { name: 'Vue.js', language: 'JavaScript' },
-        { name: 'Adonis', language: 'JavaScript' },
-        { name: 'Rails', language: 'Ruby' },
-        { name: 'Sinatra', language: 'Ruby' },
-        { name: 'Laravel', language: 'PHP' },
-        { name: 'Phoenix', language: 'Elixir' },
-      ],
+      local_value: this.value
     };
   },
+  watch: {
+    local_value(val) {
+      if (val !== this.value) {
+        this.$emit("input", val);
+      }
+    }
+  }
 };
 </script>
 
-<style>
-</style>
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
