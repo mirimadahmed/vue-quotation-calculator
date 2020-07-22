@@ -6,7 +6,7 @@
       <small id="label" for="input" v-if="settings.label.length > 0">{{ settings.label }}</small>
       <input type="text" id="input" class="form-control" v-model="local_value" />
     </div>
-    <div class="text-right">
+    <div :class="settings.buttonPosition ? settings.buttonPosition : 'text-right'">
       <button
         type="button"
         class="btn btn-success btn-lg"

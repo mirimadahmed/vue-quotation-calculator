@@ -176,5 +176,18 @@
         "ABC125": 0,
         "ABC126": 50,
         "ABC127": 70
+    },
+    "zipCodeSettings" : {
+        "type": "text",
+        "requried": true,
+        "hasButton": true,
+        "buttonText": "Next",
+        "buttonPosition": "text-center",
+        "label": "",
+        "title": "Enter zip code",
+        "subTitle": "",
+        "image": "",
+        "tooltip": "",
+        "price": 20
     }
 }

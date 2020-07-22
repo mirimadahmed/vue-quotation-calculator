@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <ZipCodeSelector :zipCodeSettings="zipCodeSettings" :zipCodeMapping="zipCodeMapping" @zip-selected="zipCodeSelected" @zip-not-supported="zipNotSupported" />
+  </div>
 </template>
 
 <script>
@@ -10,6 +12,7 @@ import MultiselectInput from "@/components/inputs/multiselect-input.vue";
 import RadioInput from "@/components/inputs/radio-input.vue";
 import RangeInput from "@/components/inputs/range-input.vue";
 import TextInput from "@/components/inputs/text-input.vue";
+import ZipCodeSelector from "@/components/ZipCodeSelector.vue";
 
 export default {
   components: {
@@ -18,23 +21,34 @@ export default {
     MultiselectInput,
     RadioInput,
     RangeInput,
-    TextInput
+    TextInput,
+    ZipCodeSelector
   },
   computed: {
     mainSettings() {
       return inputs;
     },
-    postCodeMapping() {
+    zipCodeMapping() {
       return inputs.postCodeMapping;
     },
     mainServices() {
       return inputs.services.map(item => item.heading);
+    },
+    zipCodeSettings() {
+      return inputs.zipCodeSettings
     }
   },
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    zipCodeSelected(zip) {
+      alert(zip);
+    },
+    zipNotSupported() {
+      alert('Zip not supported show error here')
+    }
+  }
 };
 </script>
 
