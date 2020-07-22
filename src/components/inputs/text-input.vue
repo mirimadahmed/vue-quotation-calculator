@@ -50,7 +50,7 @@ export default {
 }
 #label {
   margin-bottom: -50px;
-  padding-left: 15px;
+  padding-left: 35px;
   padding-top: 5px;
   position: absolute;
   color: #ccc;

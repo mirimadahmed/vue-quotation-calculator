@@ -3,7 +3,7 @@
   <div id="app">
     <div id="nav">
      <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#"><img width="100%" src="https://i1.wp.com/gogreenpristine.uk/wp-content/uploads/2020/05/Asset-3.png"></a>
+  <a class="navbar-brand" href="#"><img class="img-fluid" src="https://i1.wp.com/gogreenpristine.uk/wp-content/uploads/2020/05/Asset-3.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -70,4 +70,12 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: .25rem !important;
+      padding-left: .25rem !important;
+  }
+}
+
 </style>

@@ -1,5 +1,8 @@
 <template>
-  <div class="hello">
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+          <div class="hello">
     <h1>Checkbox input {{ radioInput }}</h1>
     <CheckboxInput
       v-model="checkboxInput"
@@ -20,6 +23,20 @@
     <h1>Multiselect input {{ multiSelectInput }} </h1>
     <MultiselectInput v-model="multiSelectInput" :settings="inputDef.services[0].subServices[0].questions[5]" />
   </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-3" style="border: 1px solid gray; border-radius:10px;">
+          <h1>Text input {{ textInput }}</h1>
+           <h1>Date input {{ dateInput }}</h1>
+            <h1>Radio input {{ radioInput }}</h1>
+            <h1>Radio input {{ radioInput }}</h1>
+             <h1>Range input {{ rangeInput }} </h1>
+            <h1>Multiselect input {{ multiSelectInput }} </h1>
+      </div>
+    </div>
+
+  </div>
+</div>
 </template>
 
 <script>
