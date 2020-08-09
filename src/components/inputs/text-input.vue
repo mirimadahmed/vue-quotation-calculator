@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3">
+  <div class="m-auto p-3">
     <h2 class="text-left" v-if="settings.title.length > 0">{{ settings.title }}</h2>
     <p class="text-left" v-if="settings.subTitle.length > 0">{{ settings.subTitle }}</p>
     <div class="form-group input-group-lg" id="holder">

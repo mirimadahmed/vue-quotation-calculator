@@ -35,6 +35,41 @@
             :settings="inputDef.services[0].subServices[0].questions[5]"
           />
         </div>
+
+        <div class="footer p-2" style="border-top:1px solid gray">
+          <p class="footer-details float-left p-2 mb-0">See Details ^</p>
+          <button type="button" class="btn btn-success btn-lg float-right">Next</button>
+        </div>
+      </div>
+      <div class="col-md-4 details">
+        <div class="p-3" style="border: 1px solid gray; border-radius:10px;">
+          <h1>Text input {{ textInput }}</h1>
+          <TextInput
+            v-model="textInput"
+            :settings="inputDef.services[0].subServices[0].questions[0]"
+            @clicked="btnClicked"
+          />
+          <h1>Date input {{ dateInput }}</h1>
+          <DateInput
+            v-model="dateInput"
+            :settings="inputDef.services[0].subServices[0].questions[2]"
+          />
+          <h1>Radio input {{ radioInput }}</h1>
+          <RadioInput
+            v-model="radioInput"
+            :settings="inputDef.services[0].subServices[0].questions[3]"
+          />
+          <h1>Range input {{ rangeInput }}</h1>
+          <RangeInput
+            v-model="rangeInput"
+            :settings="inputDef.services[0].subServices[0].questions[4]"
+          />
+          <h1>Multiselect input {{ multiSelectInput }}</h1>
+          <MultiselectInput
+            v-model="multiSelectInput"
+            :settings="inputDef.services[0].subServices[0].questions[5]"
+          />
+        </div>
       </div>
       <div class="col-md-4">
         <div class="p-3" style="border: 1px solid gray; border-radius:10px;">
@@ -62,7 +97,7 @@ import TextInput from "@/components/inputs/text-input.vue";
 export default {
   name: "HelloWorld",
   props: {
-    msg: String
+    msg: String,
   },
   components: {
     CheckboxInput,
@@ -70,12 +105,12 @@ export default {
     MultiselectInput,
     RadioInput,
     RangeInput,
-    TextInput
+    TextInput,
   },
   computed: {
     inputDef() {
       return inputs;
-    }
+    },
   },
   data() {
     return {
@@ -84,16 +119,52 @@ export default {
       rangeInput: 0,
       checkboxInput: [],
       multiSelectInput: [],
-      dateInput: ""
+      dateInput: "",
     };
   },
   methods: {
     btnClicked() {
       alert("btn clicked from text input");
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 500;
+  background: #fff;
+}
+.footer-details {
+  display: block;
+}
+.details {
+  display: none;
+}
+.show-mobile-details {
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    position: relative !important;
+  }
+  .footer-details {
+    display: none;
+  }
+  .details {
+    display: block;
+  }
+}
 </style>

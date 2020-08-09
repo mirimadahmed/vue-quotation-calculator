@@ -133,6 +133,7 @@
                 {
                     "type": "multiselect",
                     "requried": true,
+                    "multiple": true,
                     "title": "How many rooms?",
                     "subTitle": "How many rooms?",
                     "label": "select something",
@@ -189,5 +190,44 @@
         "image": "",
         "tooltip": "",
         "price": 20
+    },
+    "servicesQuestion": {
+        "type": "multiselect",
+        "requried": true,
+        "multiple": false,
+        "closeOnSelect": true,
+        "title": "Select the service you want",
+        "hasButton": true,
+        "buttonText": "Next",
+        "buttonPosition": "text-center",
+        "subTitle": "",
+        "label": "",
+        "image": "",
+        "tooltip": "",
+        "price": 20,
+        "hours": 0,
+        "options": [{
+                "value": "residential",
+                "image": "",
+                "label": "Residential",
+                "subTitle": "",
+                "toolTip": ""
+            },
+            {
+                "value": "2",
+                "image": "",
+                "label": "Option 2",
+                "subTitle": "",
+                "toolTip": ""
+            },
+            {
+                "value": "3",
+                "image": "",
+                "label": "Option 3",
+                "subTitle": "",
+                "toolTip": ""
+            }
+        ]
+
     }
 }

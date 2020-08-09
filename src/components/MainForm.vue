@@ -1,6 +1,23 @@
 <template>
-  <div>
-    <ZipCodeSelector :zipCodeSettings="zipCodeSettings" :zipCodeMapping="zipCodeMapping" @zip-selected="zipCodeSelected" @zip-not-supported="zipNotSupported" />
+  <div class="row justify-content-md-center">
+    <div class="col-md-6" v-if="selectedZip === null">
+      <MultiselectInput
+        v-if="!selectedService"
+        :settings="servicesQuestion"
+        v-model="selectedServiceItem"
+        @clicked="serviceSelected"
+      />
+      <ZipCodeSelector
+        v-else
+        :zipCodeSettings="zipCodeSettings"
+        :zipCodeMapping="zipCodeMapping"
+        @zip-selected="zipCodeSelected"
+        @zip-not-supported="zipNotSupported"
+      />
+    </div>
+    <div v-else class="col-md-12">
+
+    </div>
   </div>
 </template>
 
@@ -35,18 +52,32 @@ export default {
       return inputs.services.map(item => item.heading);
     },
     zipCodeSettings() {
-      return inputs.zipCodeSettings
+      return inputs.zipCodeSettings;
+    },
+    servicesQuestion() {
+      return inputs.servicesQuestion;
+    },
+    selectedServiceSettings() {
+      this.selectedService ? this.mainSettings.services.find(item => item.type === this.selectedServiceItem.value) : null
     }
   },
   data() {
-    return {};
+    return {
+      selectedServiceItem: null,
+      selectedService: false,
+      selectedZip: null,
+      currentQuestion: 0
+    };
   },
   methods: {
     zipCodeSelected(zip) {
-      alert(zip);
+      this.selectedZip = zip;
     },
     zipNotSupported() {
-      alert('Zip not supported show error here')
+      alert("Zip not supported show error here");
+    },
+    serviceSelected() {
+      this.selectedService = true;
     }
   }
 };
