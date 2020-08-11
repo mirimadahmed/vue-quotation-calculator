@@ -16,7 +16,7 @@
       />
     </div>
     <div v-else class="col-md-12">
-
+      
     </div>
   </div>
 </template>

@@ -35,7 +35,6 @@
             :settings="inputDef.services[0].subServices[0].questions[5]"
           />
         </div>
-
         <div class="footer p-2" style="border-top:1px solid gray">
           <p class="footer-details float-left p-2 mb-0">See Details ^</p>
           <button type="button" class="btn btn-success btn-lg float-right">Next</button>
