@@ -14,9 +14,18 @@
         @zip-selected="zipCodeSelected"
         @zip-not-supported="zipNotSupported"
       />
+
     </div>
     <div v-else class="col-md-12">
-      
+        <div v-if="selectedServiceItem===''" class="col-md-12">
+            
+        </div>
+        <div v-else-if="selectedServiceItem==='a'" class="col-md-12">
+            
+        </div>
+        <div v-else-if="selectedServiceItem==='b'" class="col-md-12">
+            
+        </div>
     </div>
   </div>
 </template>
@@ -30,6 +39,7 @@ import RadioInput from "@/components/inputs/radio-input.vue";
 import RangeInput from "@/components/inputs/range-input.vue";
 import TextInput from "@/components/inputs/text-input.vue";
 import ZipCodeSelector from "@/components/ZipCodeSelector.vue";
+import EnquirySelector from "@/components/EnquirySelector.vue";
 
 export default {
   components: {
@@ -39,7 +49,8 @@ export default {
     RadioInput,
     RangeInput,
     TextInput,
-    ZipCodeSelector
+    ZipCodeSelector,
+    EnquirySelector
   },
   computed: {
     mainSettings() {
